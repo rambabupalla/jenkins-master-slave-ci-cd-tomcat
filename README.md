@@ -1,20 +1,23 @@
-#Jenkins Master-Slave CI/CD Pipeline with Tomcat Deployment
+Jenkins Master-Slave CI/CD Pipeline with Tomcat Deployment
+Project Overview
 
-📌 Project Overview
+This project demonstrates a complete CI/CD pipeline implementation using Jenkins Master-Slave architecture to automate the build and deployment of a Java web application to a remote Apache Tomcat server.
 
-Designed and implemented a complete CI/CD pipeline using Jenkins Master-Slave architecture to automate build and deployment of a Java web application to Apache Tomcat.
+The build process runs on a Jenkins Slave node, and the deployment is performed automatically using SSH.
 
-🏗 Infrastructure Setup
+Infrastructure Setup
 
-3 Linux Virtual Machines:
+Three Linux virtual machines were created:
 
-Jenkins Master
+VM 1 – Jenkins Master
 
-Jenkins Slave (Build Node)
+VM 2 – Jenkins Slave (Build Node)
 
-Tomcat Deployment Server
+VM 3 – Tomcat Server (Deployment Server)
 
-#Tools & Technologies
+All servers are connected through SSH.
+
+Tools & Technologies
 
 Jenkins (Pipeline + Nodes)
 
@@ -30,38 +33,55 @@ SSH
 
 Java
 
-#CI/CD Workflow
+CI/CD Workflow
 
 Developer pushes code to GitHub
 
-Jenkins pipeline triggers build
+Jenkins pipeline starts
 
-Build executed on Jenkins Slave node
+Build is executed on Jenkins Slave
 
-WAR artifact generated using Maven
+WAR file is generated using Maven
 
-Artifact transferred using Publish Over SSH
+Artifact is transferred using Publish Over SSH
 
-Application deployed to Tomcat server
+Application is deployed to Tomcat
 
 Application becomes live
 
-#Key Features
+Key Features
 
-Distributed build architecture using Jenkins Nodes
+Configured Jenkins Master-Slave architecture
 
-Automated build and deployment process
+Implemented Pipeline-based CI/CD
+
+Automated Java build using Maven
 
 Remote deployment using SSH
 
-WAR-based application deployment
+Fully automated deployment process
 
-Fully functional CI/CD pipeline
+Project Structure
+.
+├── Jenkinsfile
+├── sample-app/
+│   ├── pom.xml
+│   └── src/
+└── screenshots/
 
-#Outcome
+Screenshots
+
+Add your screenshots inside the screenshots/ folder and reference them like this:
+
+![Pipeline](screenshots/pipeline-success.png)
+![Tomcat](screenshots/tomcat-deployment.png)
+
+Outcome
 
 Reduced manual deployment effort
 
-Achieved consistent and automated deployments
+Improved build consistency
 
-Improved build and deployment reliability
+Enabled automated CI/CD workflow
+
+Implemented distributed build system
