@@ -1,94 +1,93 @@
-🚀 Jenkins Master-Slave CI/CD Pipeline with Tomcat Deployment
-📌 Project Overview
+# Jenkins Master-Slave CI/CD Pipeline with Tomcat Deployment
 
-This project demonstrates a complete CI/CD pipeline implementation using Jenkins Master-Slave architecture to automate the build and deployment of a Java web application to a remote Apache Tomcat server.
+## Project Overview
+This project demonstrates the implementation of a complete **CI/CD pipeline** using **Jenkins Master-Slave architecture**.
 
-The build process runs on a separate slave node, and deployment is handled automatically using SSH.
+The goal was to automate the **build and deployment** of a Java web application to a remote **Apache Tomcat server** using a distributed build system and **SSH-based deployment**.
 
-🖥 Infrastructure Setup
+---
 
-Three Linux virtual machines were configured:
+## Technologies Used
+- **Jenkins**
+- **Apache Tomcat**
+- **GitHub**
+- **Maven**
+- **Linux**
+- **SSH**
+- **Java**
 
-VM 1 – Jenkins Master
+---
 
-VM 2 – Jenkins Slave (Build Node)
+## Infrastructure Setup
 
-VM 3 – Tomcat Server (Deployment Server)
+### 1. Virtual Machine Configuration
+- Created **three Linux virtual machines**
+- Configured **VM 1 as Jenkins Master**
+- Configured **VM 2 as Jenkins Slave (Build Node)**
+- Configured **VM 3 as Tomcat Deployment Server**
+- Established secure **SSH connectivity** between servers
 
-All servers are connected through secure SSH communication.
+### 2. Jenkins Master-Slave Setup
+- Installed **Jenkins** on Master server
+- Configured **Slave node** using Jenkins Nodes
+- Connected Slave using **SSH authentication**
+- Verified **distributed build execution**
 
-🛠 Tools & Technologies Used
+---
 
-Jenkins (Pipeline + Nodes)
+## CI/CD Pipeline Implementation
 
-Apache Tomcat
+### 1. Source Code Integration
+- Connected Jenkins with **GitHub repository**
+- Created a **Pipeline project**
+- Defined build stages in **Pipeline script**
 
-GitHub
+### 2. Build Automation
+- Executed **Maven build** on Jenkins Slave
+- Generated **WAR artifact**
+- Verified successful **build execution**
 
-Maven
+### 3. Automated Deployment
+- Configured **Publish Over SSH plugin**
+- Transferred **WAR file** to Tomcat server
+- Deployed application to **Tomcat webapps directory**
+- Verified successful **application deployment**
 
-Linux
+---
 
-SSH
+## CI/CD Workflow
+1. Developer pushes code to **GitHub**
+2. **Jenkins Pipeline** starts
+3. Build runs on **Jenkins Slave**
+4. **WAR file** is generated
+5. Artifact transferred via **SSH**
+6. Application deployed to **Tomcat**
+7. Application becomes **live**
 
-Java
+---
 
-🔄 CI/CD Workflow
+## Key Features Implemented
+- **Distributed build architecture**
+- **Pipeline-based CI/CD automation**
+- Automated **WAR generation using Maven**
+- Remote deployment using **SSH**
+- Fully automated **deployment workflow**
 
-Developer pushes code to GitHub
+---
 
-Jenkins Pipeline starts automatically
+## Screenshots
+Screenshots of **pipeline execution**, **slave configuration**, and **Tomcat deployment** are available in the `/screenshots` folder.
 
-Build is executed on Jenkins Slave node
+---
 
-WAR file is generated using Maven
+## Learning Outcomes
+- Hands-on implementation of **distributed Jenkins builds**
+- Understanding of **CI/CD pipeline architecture**
+- Experience with **automated remote deployment**
+- Practical integration of **GitHub with Jenkins**
+- Real-world **DevOps workflow implementation**
 
-Artifact is transferred using Publish Over SSH
+---
 
-Application is deployed to Tomcat server
-
-Application becomes live
-
-🔥 Key Features
-
-✅ Configured Jenkins Master-Slave architecture
-
-✅ Implemented Pipeline-based CI/CD
-
-✅ Automated Java build using Maven
-
-✅ Remote deployment using SSH
-
-✅ Fully automated deployment workflow
-
-✅ Distributed build execution
-
-📂 Project Structure
-.
-├── Jenkinsfile
-├── sample-app/
-│   ├── pom.xml
-│   └── src/
-└── screenshots/
-
-📸 Screenshots
-
-Add screenshots inside the screenshots/ folder and reference them like this:
-
-![Pipeline Success](screenshots/pipeline-success.png)
-![Tomcat Deployment](screenshots/tomcat-deployment.png)
-
-📊 Project Outcome
-
-Reduced manual deployment effort
-
-Improved build reliability
-
-Achieved consistent deployments
-
-Implemented real-world CI/CD architecture
-
-👨‍💻 Author
-
-Rambabu Palla
-DevOps & Linux Enthusiast
+## Author
+**Rambabu Palla**
