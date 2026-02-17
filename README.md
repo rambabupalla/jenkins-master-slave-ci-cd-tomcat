@@ -1,4 +1,5 @@
-🚀 Jenkins Master-Slave CI/CD Pipeline with Tomcat Deployment
+#Jenkins Master-Slave CI/CD Pipeline with Tomcat Deployment
+
 📌 Project Overview
 
 Designed and implemented a complete CI/CD pipeline using Jenkins Master-Slave architecture to automate build and deployment of a Java web application to Apache Tomcat.
@@ -13,7 +14,7 @@ Jenkins Slave (Build Node)
 
 Tomcat Deployment Server
 
-⚙️ Tools & Technologies
+#Tools & Technologies
 
 Jenkins (Pipeline + Nodes)
 
@@ -29,7 +30,7 @@ SSH
 
 Java
 
-🔄 CI/CD Workflow
+#CI/CD Workflow
 
 Developer pushes code to GitHub
 
@@ -45,7 +46,7 @@ Application deployed to Tomcat server
 
 Application becomes live
 
-🔥 Key Features
+#Key Features
 
 Distributed build architecture using Jenkins Nodes
 
@@ -57,7 +58,7 @@ WAR-based application deployment
 
 Fully functional CI/CD pipeline
 
-📊 Outcome
+#Outcome
 
 Reduced manual deployment effort
 
